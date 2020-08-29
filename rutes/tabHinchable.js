@@ -7,7 +7,7 @@ var router = express.Router();
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({ uploadDir: './uploads'});
 
-router.post('/savetabhinchable', TabHinchableController.saveTable);
+router.post('/tabhinchable', TabHinchableController.saveTable);
 router.get('/tabhinchable', TabHinchableController.getTables);
 router.get('/tabhinchable/:id', TabHinchableController.getTable); //el interrogante lo hace opcional el id
 router.put('/tabhinchable/:id', TabHinchableController.updateTable);

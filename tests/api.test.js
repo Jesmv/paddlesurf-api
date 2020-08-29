@@ -7,3 +7,8 @@ test('GET /tabhinchable devuelve lista tablas', async () => {
 
     expect(Array.isArray(response.data.tabHinchable)).toBe(true);
 });
+
+test('POST /tabhinchable crea documento', async() => {
+    const response = await axios.post(`${BASE_URL}/api/tabhinchable`);
+    expect(response.status).toBe(200);
+});
