@@ -8,8 +8,8 @@ var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart({ uploadDir: './uploads'});
 
 router.post('/savetabhinchable', TabHinchableController.saveTable);
-router.get('/tabhinchable/:id?', TabHinchableController.getTable); //el interrogante lo hace opcional el id
-router.get('/tabhinchables', TabHinchableController.getTables);
+router.get('/tabhinchable', TabHinchableController.getTables);
+router.get('/tabhinchable/:id', TabHinchableController.getTable); //el interrogante lo hace opcional el id
 router.put('/tabhinchable/:id', TabHinchableController.updateTable);
 router.delete('/tabhinchable/:id', TabHinchableController.deleteTable);
 router.post('/upload-image/:id', multipartMiddleware, TabHinchableController.uploadImage);
